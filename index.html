@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Music Player</title>
+  <link rel="icon" type="image/x-icon" href="/images/music-favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <div class="container">
+      <div class="track-bar">
+        <div class="track-bar__fill"></div>
+      </div>
+
+      <div class="player">
+
+        <!-- player__header -->
+        <div class="player__header">
+          <div class="player__img">
+            <img src="images/player-app-thumbnail.jpg" alt="player-app-thumbnail">
+          </div>
+          <div class="player__details">
+            <h1 class="player__name">Music Player</h1>
+            <div class="player__count-wrapper">
+              <p><span class="player__count">7 </span>Songs</p>
+            </div>
+            <button type="button" class="btn is-green player__trigger">
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- player__Body -->
+        <div class="player__body">
+          <ul class="playlist">
+             <!-- dynamicaly from js -->
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
