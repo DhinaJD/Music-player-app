@@ -17,8 +17,10 @@ const PlayList = (()=>{
   const listeners = _ =>{
     playlistEl.addEventListener("click", function(e) {
       if(e.target && e.target.matches(".fa")){
-
-      }
+        let listElem = e.target.parentNode.parentNode;
+        let listElemIndex = [...listElem.parentElement.children].indexOf(listElem)
+        mainPlay(listElemIndex);
+      } 
     })
   }
 
@@ -34,6 +36,23 @@ const PlayList = (()=>{
   }
   const playerControl = () =>{
     return currentSong.paused ? currentSong.play() : currentSong.pause();
+  }
+
+  const mainPlay = clickedIndex =>{
+    /*
+      1.check whether new song or currentsong
+      2.playeconntorl
+      3.change src of the audio
+    */
+   if(currentlyPlayingIndex === clickedIndex){
+    console.log("current song");
+    playerControl();
+   }else{
+    console.log("new song");
+    currentlyPlayingIndex == clickedIndex;
+    changeAudioSrc();
+    playerControl();
+   }
   }
   
 
