@@ -21,6 +21,13 @@ const PlayList = (()=>{
         let listElemIndex = [...listElem.parentElement.children].indexOf(listElem)
         mainPlay(listElemIndex);
       } 
+    });
+
+    //playNext function
+    currentSong.addEventListener("ended" , function(){
+      if(currentlyPlayingIndex + 1){
+        playNext();
+      }
     })
   }
 
@@ -36,6 +43,12 @@ const PlayList = (()=>{
   }
   const playerControl = () =>{
     return currentSong.paused ? currentSong.play() : currentSong.pause();
+  }
+  const playNext = () =>{
+      currentlyPlayingIndex++
+      changeAudioSrc()
+      playerControl()
+      renderAll()
   }
 
   const mainPlay = clickedIndex =>{
