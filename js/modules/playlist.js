@@ -23,7 +23,7 @@ const PlayList = (()=>{
         let listElem = e.target.parentNode.parentNode;
         let listElemIndex = [...listElem.parentElement.children].indexOf(listElem)
         mainPlay(listElemIndex);
-        renderAll()
+        renderSongs()
       } 
     });
 
