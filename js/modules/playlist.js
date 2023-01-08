@@ -1,4 +1,4 @@
-import songList from "../data/songs.js";
+import { songList } from "../data/songs.js";
 import PlayerInfo from "../modules/playinfo.js";
 import TrackBar from "../modules/trackbar.js";
 
