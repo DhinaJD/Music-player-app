@@ -136,6 +136,7 @@ body{
   margin-right: 0.8rem;
 }
 .player-control{
+  min-width: 15px;
   margin-right: 0.5rem;
 }
 .player-control .fa:hover{
@@ -164,9 +165,13 @@ body{
     align-items: center;
     margin: 0;
   }
+  .player__img{
+    margin-top: 2rem;
+  }
   .player__details{
     text-align: center;
     display: block;
+    margin: 15px 0 30px 0;
   }
 }
 @media only screen and (min-width:768px) {
