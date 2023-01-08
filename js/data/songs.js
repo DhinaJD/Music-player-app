@@ -1,4 +1,4 @@
-const songList = [
+export const songList = [
   {
     id:"1",
     title:"Let Me Down Slowly",
@@ -42,5 +42,3 @@ const songList = [
     duration:"2:25"
   },
 ];
-
-export default songList;
