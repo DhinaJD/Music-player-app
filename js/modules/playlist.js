@@ -1,4 +1,4 @@
-import { songList } from "../data/songs.js";
+import songList from "../data/songs.js";
 import PlayerInfo from "../modules/playinfo.js";
 import TrackBar from "../modules/trackbar.js";
 
@@ -23,7 +23,7 @@ const PlayList = (()=>{
         let listElem = e.target.parentNode.parentNode;
         let listElemIndex = [...listElem.parentElement.children].indexOf(listElem)
         mainPlay(listElemIndex);
-        renderAll()
+        renderSongs()
       } 
     });
 
